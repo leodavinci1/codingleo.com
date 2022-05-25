@@ -15,6 +15,8 @@ const {
   text: { purple, red, green, yellow },
 } = COLORS;
 
+const Str = (color) => {};
+
 const Home = () => (
   <S.Container>
     <S.Editor>

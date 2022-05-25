@@ -5,13 +5,15 @@ export const Line = styled.div`
   flex-direction: row;
   align-items: center;
   font-family: Consolas;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 15px;
   padding: 2px 0;
 `;
 
 export const Count = styled.div`
   font-family: Consolas;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 15px;
   width: 40px;
   margin-right: 15px;
   margin-left: 15px;
@@ -27,6 +29,7 @@ export const Count = styled.div`
 
 export const Content = styled.div`
   font-family: Consolas;
+  font-weight: 600;
   margin-left: ${({ ident }) => ident * 50}px;
-  font-size: 20px;
+  font-size: 15px;
 `;

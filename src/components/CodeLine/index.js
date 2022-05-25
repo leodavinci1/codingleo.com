@@ -1,3 +1,5 @@
+/* eslint-disable react/require-default-props */
+/* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -15,7 +17,7 @@ CodeLine.propTypes = {
   count: PropTypes.number.isRequired,
   ident: PropTypes.number.isRequired,
   active: PropTypes.bool.isRequired,
-  content: PropTypes.string.isRequired,
+  content: PropTypes.any,
 };
 
 export default CodeLine;

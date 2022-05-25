@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import ConsolasWoff2 from '../../assets/fonts/consolas.woff2';
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -9,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     @font-face {
       font-family: 'Consolas';
-      src: local('Consolas'), url(./fonts/consolas.woff2) format('woff2');
+      src: url(${ConsolasWoff2}) format('woff2');
     }
     body {
       background-color:  ${({ theme: { colors } }) => colors.background};
