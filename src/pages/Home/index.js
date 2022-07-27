@@ -7,15 +7,26 @@ import { COLORS } from '../../constants/colors';
 import jsIcon from '../../assets/images/js.png';
 import { Close } from '../../assets/icons';
 import { CodeLine } from '../../components';
+import { Text } from '../../utils/text';
 import { Creators as sessionCreators } from '../../store/ducks/session';
 
 import * as S from './styles';
 
 const {
-  text: { purple, red, green, yellow },
+  text: { purple, red, green, blue, yellow },
 } = COLORS;
+const textColors = {
+  purple,
+  red,
+  green,
+  blue,
+  yellow,
+};
 
-const Str = (color) => {};
+console.log(textColors);
+const locale = 'PT-BR';
+const text = new Text(S, textColors);
+const t = text.t.bind(this);
 
 const Home = () => (
   <S.Container>
@@ -36,7 +47,10 @@ const Home = () => (
           active
           content={
             <>
-              <S.C color={purple}>import</S.C> Leo from "leo";
+              {t('purple', 'import')}
+              <S.C color={red}> Leo </S.C>
+              <S.C color={purple}> from </S.C>
+              <S.C color={green}> "leojs"</S.C>;
             </>
           }
         />
@@ -47,8 +61,9 @@ const Home = () => (
           content={
             <>
               <S.C color={purple}>import</S.C>
-              {`  CurriculumVitae from
-          "curriculum-vitae"`}
+              <S.C color={red}> CurriculumVitae </S.C>
+              <S.C color={purple}> from </S.C>
+              <S.C color={green}> "curriculum-vitae"</S.C>;
             </>
           }
         />
@@ -59,7 +74,9 @@ const Home = () => (
           content={
             <>
               <S.C color={purple}>import</S.C>
-              {` { translateCurriculum }  from "../utils/localization";`}
+              <S.C color={red}> translateCurriculum </S.C>
+              <S.C color={purple}> from </S.C>
+              <S.C color={green}> "../utils/localization"</S.C>;
             </>
           }
         />
@@ -68,37 +85,91 @@ const Home = () => (
           ident={0}
           count={5}
           active={false}
-          content={<>{`export default const LeonardoCunhaCV = (😄) => {`}</>}
+          content={
+            <>
+              <S.C color={purple}>export</S.C>
+              <S.C color={purple}> default </S.C>
+              <S.C color={purple}>function </S.C>
+              <S.C color={blue}>LeonardoCunhaCV</S.C>(😄){' {'}
+            </>
+          }
         />
         <CodeLine
           ident={1}
           count={6}
           active={false}
-          content={<>{`const {🏀, 🎮, 💻} = 😄;`}</>}
+          content={
+            <>
+              <S.C color={purple}>const</S.C>
+              {' {🏀, 🎮, 💻} = 😄'}
+            </>
+          }
         />
         <CodeLine
           ident={1}
           count={7}
           active={false}
-          content={<>const 🦁 = new Leo(🏀, 🎮, 💻);</>}
+          content={
+            <>
+              <S.C color={purple}>const</S.C>
+              {' 🦁 = '}
+              <S.C color={purple}>new</S.C>
+              <S.C color={blue}> Leo</S.C>
+              (🏀, 🎮, 💻)
+            </>
+          }
         />
         <CodeLine
           ident={1}
           count={8}
           active={false}
-          content={<>const 🎨 = 🦁.getFrontendSkills();</>}
+          content={
+            <>
+              <S.C color={purple}>const</S.C>
+              {' 🎨 = 🦁.'}
+              <S.C color={blue}> getFrontendSkills</S.C>
+              ();
+            </>
+          }
         />
         <CodeLine
           ident={1}
           count={9}
           active={false}
-          content={<>const 🚚 = 🦁.getBackendSkills();</>}
+          content={
+            <>
+              <S.C color={purple}>const</S.C>
+              {' 🚚 = 🦁.'}
+              <S.C color={blue}> getBackendSkills</S.C>
+              ();
+            </>
+          }
         />
         <CodeLine
           ident={1}
           count={10}
           active={false}
-          content={<>const 📄 = 🦁.getPastProjects();</>}
+          content={
+            <>
+              <S.C color={purple}>const</S.C>
+              {' 📄 = 🦁.'}
+              <S.C color={blue}> getPastProjects</S.C>
+              ();
+            </>
+          }
+        />
+        <CodeLine
+          ident={1}
+          count={11}
+          active={false}
+          content={
+            <>
+              <S.C color={purple}>const</S.C>
+              <S.C color={blue}> translateCurriculum</S.C>
+              <S.C color={green}>{`"${locale}"`}</S.C>
+            </>
+            // <>{`const 📦 = translateCurriculum("PT-BR", {🦁, 🎨, 🚚, 📄});`}</>
+          }
         />
         <CodeLine
           ident={1}
