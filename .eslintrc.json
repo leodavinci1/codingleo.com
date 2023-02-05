@@ -23,7 +23,9 @@
     ],
     "rules": {
         "react/jsx-props-no-spreading": ["error", {"custom": "ignore"}],
-        "prettier/prettier": ["error"],
+        "prettier/prettier": ["error",{
+            "endOfLine": "auto"
+          }],
         "react/jsx-filename-extension": [
           "warn",
           {"extensions": [".js", ".jsx"]}

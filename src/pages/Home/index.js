@@ -6,8 +6,7 @@ import { push } from 'connected-react-router';
 import { COLORS } from '../../constants/colors';
 import jsIcon from '../../assets/images/js.png';
 import { Close } from '../../assets/icons';
-import { CodeLine } from '../../components';
-import { Text } from '../../utils/text';
+import { CodeLine, T } from '../../components';
 import { Creators as sessionCreators } from '../../store/ducks/session';
 
 import * as S from './styles';
@@ -23,10 +22,7 @@ const textColors = {
   yellow,
 };
 
-console.log(textColors);
 const locale = 'PT-BR';
-const text = new Text(S, textColors);
-const t = text.t.bind(this);
 
 const Home = () => (
   <S.Container>
@@ -47,10 +43,10 @@ const Home = () => (
           active
           content={
             <>
-              {t('purple', 'import')}
-              <S.C color={red}> Leo </S.C>
-              <S.C color={purple}> from </S.C>
-              <S.C color={green}> "leojs"</S.C>;
+              <T color='purple'>import</T>
+              <T color='red'>Leo</T>
+              <T color='purple'>from</T>
+              <T color='green'>"leojs"</T>;
             </>
           }
         />
