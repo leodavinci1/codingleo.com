@@ -1,55 +1,51 @@
-
-
-
 # codingleo.com
 
 - [Codebase](#codebase)
-- [Tecnologias](#-tecnologias)
-- [Estrutura de pastas](#-estrutura-de-pastas)
-- [Ducks Pattern](#-ducks-pattern)
-- [Code Style](#-code-style)
-- [Primeiro setup](#primeiro-setup)
-- [Rodando localmente](#-rodando-localmente)
+- [Technologies](#technologies)
+- [Folder Structure](#folder-structure)
+- [Ducks Pattern](#ducks-pattern)
+- [Code Style](#code-style)
+- [Initial Setup](#initial-setup)
+- [Running Locally](#running-locally)
 
 ## Codebase
 
-### 💻 Tecnologias
+### 💻 Technologies
 
-Agora vamos falar um pouco da arquitetura deste projeto:
+Now let's talk a bit about the architecture of this project:
 
-- **Fullstack JavaScript**: Nós usamos Node.js no nosso backend e React para o frontend. Todo o codebase relacionado ao Core Backoffice é feito em JavaScript.
+- **Fullstack JavaScript**: We use Node.js for our backend and React for the frontend. All codebase related to the Core Backoffice is written in JavaScript.
 
-Aqui está uma lista das principais tecnologias que usamos:
+Here's a list of the main technologies we use:
 
 - **React**: Frontend React App
-- **Styled Components**: Estilo para os componentes
-- **Redux**: Container do estado da aplicação
-- **Redux-Saga**: Middleware usado pela store do Redux para se comunicar com os diferentes estados de forma assíncrona.
-- **Redux Sauce**: Ferramenta para criar e organizar reducers, actions e types do Redux.
+- **Styled Components**: Styling for components
+- **Redux**: Application state container
+- **Redux-Saga**: Middleware used by Redux store to communicate with different states asynchronously.
+- **Redux Sauce**: Tool for creating and organizing reducers, actions, and types for Redux.
 
 
+### 🦆 Ducks Pattern
 
-###  🦆 Ducks Pattern
-
-A principal diferença estrutural do padrão Ducks é que ele combina reducers, types e actions em um único arquivo, e com a ajuda do Redux Sauce, teremos um estado global, actions, types, reducers e estado inicial para cada página ou estrutura necessária. Assim, tornando os arquivos menos extensos e de fácil manutenção.
+The main structural difference of the Ducks pattern is that it combines reducers, types, and actions into a single file, and with the help of Redux Sauce, we have a global state, actions, types, reducers, and initial state for each necessary page or structure. Thus, making files less extensive and easy to maintain.
 
 
 ### ✨ Code Style
 
-Nós rodamos o Prettier e o ESLint para manter padrões básicos de qualidade de código, os quais se baseiam no padrão [airbnb](https://github.com/airbnb/javascript). O ESLint também é rodado na pipeline para garantir que nenhum código de baixa qualidade entre no repositório. Para facilitar o processo de correção de pendências com a configuração do ESLint, baixe a extensão de VS Code [Prettier ESLint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint) e a configure para formatar o código em "Format on save".
+We run Prettier and ESLint to maintain basic code quality standards, which are based on the [airbnb](https://github.com/airbnb/javascript) standard. ESLint is also run in the pipeline to ensure that no low-quality code enters the repository. To facilitate the process of addressing ESLint configuration issues, download the VS Code extension [Prettier ESLint](https://marketplace.visualstudio.com/items?itemName=rvest.vs-code-prettier-eslint) and configure it to format the code on "Format on save".
 
 
-### ⚙️ Instalar
+### ⚙️ Installation
 
-Temos apenas dois passos de instalação da aplicação:
+We have only two installation steps for the application:
 
-1. **Instalar yarn**: Nós usamos [yarn](https://yarnpkg.com) para gerenciar as dependencias do código JavaScript. Leia a [documentação](https://yarnpkg.com/en/docs/install) para instruções de como instalar.
-2. **Instalar dependências**: Para instalar as dependencias no projeto basta rodar o comando:
+1. **Install yarn**: We use [yarn](https://yarnpkg.com) to manage JavaScript code dependencies. Read the [documentation](https://yarnpkg.com/en/docs/install) for installation instructions.
+2. **Install dependencies**: To install project dependencies, simply run the command:
 `yarn`
 
-### 🔥 Rodando localmente
+### 🔥 Running Locally
 
-1. **Iniciar**: Para rodar localmente basta rodar o comando:
+1. **Start**: To run locally, simply execute the command:
 `yarn start`
-2. **Lint**: Para testar a sintaxe de acordo com as configurações de lint rode o comando:
+2. **Lint**: To test syntax according to lint settings, run the command:
 `yarn lint`

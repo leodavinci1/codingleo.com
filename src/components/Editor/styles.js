@@ -1,24 +1,37 @@
 import styled, { css } from 'styled-components';
 
-const getContainerResponsive = (size) => {
+export const Terminal = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const getEditorResponsive = (size) => {
   if (size === 'md' || size === 'lg') {
     return css`
-      width: 1200px;
+      width: 650px;
+      margin-right: 20px;
     `;
   }
 
   return css`
-    width: 100%;
-    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
   `;
 };
+export const Editor = styled.div`
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 700px;
+  height: fit-content;
+  border-radius: 8px;
+  box-shadow: 3px 6px 18px 3px rgba(27, 34, 51, 0.83);
+  background: ${({
+    theme: {
+      colors: { editor },
+    },
+  }) => editor.body};
 
-export const Container = styled.div`
-  display: flex;
-  max-width: 1200px;
-  justify-content: space-between;
-  margin: 150px auto;
-  ${({ theme: { size } }) => getContainerResponsive(size)}
+  ${({ theme: { size } }) => getEditorResponsive(size)}
 `;
 
 export const Header = styled.div`
@@ -99,13 +112,14 @@ export const Tab = styled.div`
 
 export const Body = styled.div`
   padding-top: 20px;
+  padding-bottom: 20px;
+
   background: ${({
     theme: {
       colors: { editor },
     },
   }) => editor.document};
   border-radius: 0 0 8px 8px;
-  height: 100%;
 `;
 
 export const C = styled.span`

@@ -2,15 +2,13 @@
 // reducers.js
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-import session from '../store/ducks/session';
-import notify from '../store/ducks/notify';
-import loader from '../store/ducks/loader';
+import locale from '../store/ducks/locale';
+import node from '../store/ducks/node';
 
 const createRootReducer = (history) =>
   combineReducers({
-    session,
-    notify,
-    loader,
+    locale,
+    node,
     router: connectRouter(history),
   });
 export default createRootReducer;

@@ -8,7 +8,7 @@ import { routerMiddleware } from 'connected-react-router';
 import createSagaMiddleware from 'redux-saga';
 import throttle from 'lodash.throttle';
 import sagas from './sagas';
-import { saveState } from './localStorage';
+// import { saveState } from './localStorage';
 import createRootReducer from '../reducers/main';
 
 export const history = createBrowserHistory();
@@ -45,9 +45,10 @@ export default function configureStore(preloadedState) {
 
   store.subscribe(
     throttle(() => {
-      saveState({
-        session: store.getState().session ? store.getState().session : {},
-      });
+      // saveState({
+      //   locale: store.getState().locale ? store.getState().locale : {},
+      //   node: store.getState().node ? store.getState().node : {},
+      // });
     }, 1000)
   );
 

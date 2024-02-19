@@ -2,22 +2,22 @@
 import { createReducer, createActions } from 'reduxsauce';
 
 export const { Types, Creators } = createActions({
-  action: [''],
+  setLine: ['data'],
 });
 
 const initialState = {
-  data: false,
+  line: 0,
 };
 
-function action(state) {
+function setLine(state, { data }) {
   return {
     ...state,
-    data: !state.data,
+    line: data,
   };
 }
 
-const session = {
-  [Types.ACTION]: action,
+const node = {
+  [Types.SET_LINE]: setLine,
 };
 
-export default createReducer(initialState, session);
+export default createReducer(initialState, node);

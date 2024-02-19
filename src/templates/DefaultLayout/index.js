@@ -8,6 +8,7 @@ import { COLORS } from '../../constants/colors';
 import getGridClass from '../../hooks/getGridClass';
 import routes from '../../routes/app';
 import { GlobalStyles, Container } from './styles';
+import './fonts.css';
 
 const Layout = (props) => {
   // Tema Global

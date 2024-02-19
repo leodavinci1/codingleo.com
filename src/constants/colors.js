@@ -13,6 +13,12 @@ export const COLORS = {
   },
   background: '#1F2538',
   textColor: '#E4EAF1',
+  terminal: {
+    header: 'rgba(240, 240, 240, 0.7)',
+    body: 'rgba(0, 0, 0, 0.7)',
+    bodyColorText: '#FFFFFF',
+    headerColorText: '#000000',
+  },
   editor: {
     document: '#2A304B',
     body: '#232B40',

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Consolas';
+    src: url('../../assets/fonts/consolas.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Menlo';
+    src: url('../../assets/fonts/menlo.woff2') format('woff2');
+  }

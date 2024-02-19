@@ -1,191 +1,29 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { push } from 'connected-react-router';
 import { COLORS } from '../../constants/colors';
 import jsIcon from '../../assets/images/js.png';
 import { Close } from '../../assets/icons';
-import { CodeLine, T } from '../../components';
-import { Creators as sessionCreators } from '../../store/ducks/session';
+import { Editor, Terminal } from '../../components';
+import { Creators as sessionCreators } from '../../store/ducks/locale';
 
 import * as S from './styles';
 
 const {
-  text: { purple, red, green, blue, yellow },
+  text: { purple, red, green, blue },
 } = COLORS;
-const textColors = {
-  purple,
-  red,
-  green,
-  blue,
-  yellow,
+
+const Home = () => {
+  const { locale } = useSelector((state) => state.locale);
+  const { line } = useSelector((state) => state.node);
+
+  return (
+    <S.Container>
+      <Editor />
+      <Terminal />
+    </S.Container>
+  );
 };
-
-const locale = 'PT-BR';
-
-const Home = () => (
-  <S.Container>
-    <S.Editor>
-      <S.Header>
-        <S.Controls>
-          <S.Close /> <S.Minimize /> <S.Expand />
-        </S.Controls>
-        <S.DocumentName>LeonardoCunhaCV.js</S.DocumentName>
-      </S.Header>
-      <S.Tab>
-        <S.JSIcon src={jsIcon} /> LeonardoCunhaCV.js <Close />
-      </S.Tab>
-      <S.Body>
-        <CodeLine
-          ident={0}
-          count={1}
-          active
-          content={
-            <>
-              <T color='purple'>import</T>
-              <T color='red'>Leo</T>
-              <T color='purple'>from</T>
-              <T color='green'>"leojs"</T>;
-            </>
-          }
-        />
-        <CodeLine
-          ident={0}
-          count={2}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>import</S.C>
-              <S.C color={red}> CurriculumVitae </S.C>
-              <S.C color={purple}> from </S.C>
-              <S.C color={green}> "curriculum-vitae"</S.C>;
-            </>
-          }
-        />
-        <CodeLine
-          ident={0}
-          count={3}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>import</S.C>
-              <S.C color={red}> translateCurriculum </S.C>
-              <S.C color={purple}> from </S.C>
-              <S.C color={green}> "../utils/localization"</S.C>;
-            </>
-          }
-        />
-        <CodeLine ident={0} count={4} active={false} content='' />
-        <CodeLine
-          ident={0}
-          count={5}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>export</S.C>
-              <S.C color={purple}> default </S.C>
-              <S.C color={purple}>function </S.C>
-              <S.C color={blue}>LeonardoCunhaCV</S.C>(😄){' {'}
-            </>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={6}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>const</S.C>
-              {' {🏀, 🎮, 💻} = 😄'}
-            </>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={7}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>const</S.C>
-              {' 🦁 = '}
-              <S.C color={purple}>new</S.C>
-              <S.C color={blue}> Leo</S.C>
-              (🏀, 🎮, 💻)
-            </>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={8}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>const</S.C>
-              {' 🎨 = 🦁.'}
-              <S.C color={blue}> getFrontendSkills</S.C>
-              ();
-            </>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={9}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>const</S.C>
-              {' 🚚 = 🦁.'}
-              <S.C color={blue}> getBackendSkills</S.C>
-              ();
-            </>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={10}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>const</S.C>
-              {' 📄 = 🦁.'}
-              <S.C color={blue}> getPastProjects</S.C>
-              ();
-            </>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={11}
-          active={false}
-          content={
-            <>
-              <S.C color={purple}>const</S.C>
-              <S.C color={blue}> translateCurriculum</S.C>
-              <S.C color={green}>{`"${locale}"`}</S.C>
-            </>
-            // <>{`const 📦 = translateCurriculum("PT-BR", {🦁, 🎨, 🚚, 📄});`}</>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={11}
-          active={false}
-          content={
-            <>{`const 📦 = translateCurriculum("PT-BR", {🦁, 🎨, 🚚, 📄});`}</>
-          }
-        />
-        <CodeLine
-          ident={1}
-          count={12}
-          active={false}
-          content={<>return new CurriculumVitae(...📦);</>}
-        />
-        <CodeLine ident={0} count={13} active={false} content={<>{`}`}</>} />
-        <CodeLine ident={0} count={14} active={false} content={<></>} />
-      </S.Body>
-    </S.Editor>
-  </S.Container>
-);
 
 export default Home;

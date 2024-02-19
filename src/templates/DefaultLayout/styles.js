@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import ConsolasWoff2 from '../../assets/fonts/consolas.woff2';
+// import ConsolasWoff2 from '../../assets/fonts/consolas.woff2';
+// import MenloWoff2 from '../../assets/fonts/menlo.woff2';
 
 export const GlobalStyles = createGlobalStyle`
     * {
@@ -8,10 +9,7 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         -webkit-font-smoothing: antialiased;
     }
-    @font-face {
-      font-family: 'Consolas';
-      src: url(${ConsolasWoff2}) format('woff2');
-    }
+   
     body {
       background-color:  ${({ theme: { colors } }) => colors.background};
       color: ${({ theme: { colors } }) => colors.textColor};

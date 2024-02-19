@@ -1,6 +1,6 @@
 export const loadState = () => {
   try {
-    const serializedState = localStorage.getItem('_dxco-session_');
+    const serializedState = localStorage.getItem('_codingleo-session_');
     if (serializedState === null) {
       return undefined;
     }
@@ -19,7 +19,7 @@ export const loadState = () => {
 export const saveState = (state) => {
   try {
     const serializedState = JSON.stringify({ value: state, time: Date.now() });
-    localStorage.setItem('_dxco-session_', serializedState);
+    localStorage.setItem('_codingleo-session_', serializedState);
   } catch {
     // ignore write errors
   }
