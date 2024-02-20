@@ -17,7 +17,8 @@ export const Container = styled.div`
   display: flex;
   max-width: 1200px;
   justify-content: space-between;
-  margin: 150px auto;
+  margin: 150px 0 auto;
+  margin-bottom: 50px;
   ${({ theme: { size } }) => getContainerResponsive(size)}
 `;
 export const View = styled.div`
@@ -25,6 +26,7 @@ export const View = styled.div`
   flex-direction: column;
   align-items: center;
   font-family: 'Menlo';
+  justify-content: center;
 `;
 export const ContactMe = styled.div`
   display: flex;
