@@ -2,14 +2,16 @@
   "name": "codingleo.com",
   "version": "1.0.0",
   "description": "CodingLeo website",
+  "homepage": "https://codingleo.com",
   "author": "Leonardo Cunha",
-  "copyright": "Copyright 2021 CodingLeo",
+  "copyright": "Copyright 2024 CodingLeo",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "connected-react-router": "^6.9.1",
     "dotenv": "^10.0.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "gh-pages": "^6.1.1",
     "history": "4.10.1",
     "lodash.throttle": "^4.1.1",
     "prop-types": "^15.7.2",
@@ -35,7 +37,10 @@
     "web-vitals": "^2.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+      "deploy": "gh-pages -d build",
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "lint": "yarn run eslint src --cache",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

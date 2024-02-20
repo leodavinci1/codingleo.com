@@ -20,7 +20,22 @@ export const Container = styled.div`
   margin: 150px auto;
   ${({ theme: { size } }) => getContainerResponsive(size)}
 `;
-
+export const View = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Menlo';
+`;
+export const ContactMe = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  b {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+`;
 export const Header = styled.div`
   position: relative;
   display: flex;

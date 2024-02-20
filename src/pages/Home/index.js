@@ -19,10 +19,15 @@ const Home = () => {
   const { line } = useSelector((state) => state.node);
 
   return (
-    <S.Container>
-      <Editor />
-      <Terminal />
-    </S.Container>
+    <S.View>
+      <S.Container>
+        <Editor />
+        <Terminal />
+      </S.Container>
+      <S.ContactMe>
+        Let's work together! You can contact me at: <b> ofeule@gmail.com</b>
+      </S.ContactMe>
+    </S.View>
   );
 };
 
