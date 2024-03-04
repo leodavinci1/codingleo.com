@@ -12,13 +12,11 @@
 
 ### 💻 Technologies
 
-Now let's talk a bit about the architecture of this project:
-
-- **Fullstack JavaScript**: We use Node.js for our backend and React for the frontend. All codebase related to the Core Backoffice is written in JavaScript.
-
-Here's a list of the main technologies we use:
+Here's a list of the main technologies used:
 
 - **React**: Frontend React App
+- **ThreeJS**: Create and animate 3D graphics
+- **GSAP**: High-Performance animation library
 - **Styled Components**: Styling for components
 - **Redux**: Application state container
 - **Redux-Saga**: Middleware used by Redux store to communicate with different states asynchronously.

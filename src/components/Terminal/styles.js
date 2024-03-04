@@ -2,22 +2,15 @@ import styled, { css } from 'styled-components';
 
 const getTerminalResponsive = (size) => {
   if (size === 'md' || size === 'lg') {
-    return css`
-      width: 500px;
-    `;
+    return css``;
   }
 
-  return css`
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-  `;
+  return css``;
 };
 
 export const Terminal = styled.div`
   font-family: 'Menlo';
-  width: 500px;
-  height: 600px;
+
   border-radius: 8px;
   box-shadow: 3px 6px 18px 3px rgba(27, 34, 51, 0.83);
   background: ${({

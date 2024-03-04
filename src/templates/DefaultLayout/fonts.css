@@ -7,3 +7,7 @@
     font-family: 'Menlo';
     src: url('../../assets/fonts/menlo.woff2') format('woff2');
   }
+
+  .react-draggable {
+    z-index: 10000;
+  }

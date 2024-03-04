@@ -22,15 +22,39 @@
         "prettier"
     ],
     "rules": {
-        "react/jsx-props-no-spreading": ["error", {"custom": "ignore"}],
-        "prettier/prettier": ["error",{
-            "endOfLine": "auto"
-          }],
+        "react/no-unknown-property": [
+            "warn",
+            {
+                "ignore": [
+                    "css"
+                ]
+            }
+        ],
+        "react/jsx-props-no-spreading": [
+            "error",
+            {
+                "custom": "ignore"
+            }
+        ],
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
         "react/jsx-filename-extension": [
-          "warn",
-          {"extensions": [".js", ".jsx"]}
+            "warn",
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
         ],
         "import/prefer-default-export": "off",
-        "jsx-quotes": ["error", "prefer-single"]
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ]
     }
 }
