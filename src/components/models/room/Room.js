@@ -32,7 +32,6 @@ export function Room(props) {
   useFrame((state, delta) => {
     tl.current.seek(scroll.offset * tl.current.duration());
 
-    console.log('scroll offset: ', scroll.offset);
     if (scroll.offset < 0.93 && (line !== null || isVSCodeOpened)) {
       dispatch(nodeCreators.setLine(null));
       dispatch(nodeCreators.setCodeOpened(false));
@@ -50,9 +49,9 @@ export function Room(props) {
     tl.current
       .to(roomRef.current.position, { y: -0.68 }, 0.5)
 
-      .to(roomRef.current.rotation, { y: -1.5 }, 5)
-      .to(roomRef.current.position, { x: 0 }, 5)
-      .to(roomRef.current.position, { z: 6.1 }, 5)
+      .to(roomRef.current.rotation, { y: -1.5 }, 4)
+      .to(roomRef.current.position, { x: 0 }, 4)
+      .to(roomRef.current.position, { z: 6.1 }, 4)
 
       .to(roomRef.current.position, { x: -0.9, y: -0.5, z: 3 }, 9)
       .to(roomRef.current.scale, { x: 0.8, y: 0.8, z: 0.8 }, 9)

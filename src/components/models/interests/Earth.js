@@ -59,7 +59,8 @@ export function Earth(props) {
 
     // tl.current.to(earthRef.current.position, { y: 1.5 }, 0.5);
     tl.current
-      .to(earthRef.current.position, { y: 9 }, 0.25)
+      .to(earthRef.current.position, { y: -4 }, 0.3)
+      .to(earthRef.current.position, { z: 7 }, 0.4)
       .to(earthRef.current.position, { y: 9 }, 20);
   }, []);
 

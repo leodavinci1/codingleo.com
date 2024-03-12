@@ -93,7 +93,7 @@ export const Hello = styled.div`
   font-family: Menlo;
   height: 50vh;
   position: absolute;
-  top: 50vh;
+  top: 60vh;
   left: 50%;
   transform: translateX(-50%);
 `;
