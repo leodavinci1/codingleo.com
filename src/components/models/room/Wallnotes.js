@@ -89,7 +89,12 @@ export function Wallnotes(props) {
   };
 
   const pointerIn = (evt) => {
-    dispatch(nodeCreators.setCursorText('OPEN'));
+    if (evt.object.name === 'note-2' || evt.object.name === 'note-4') {
+      dispatch(nodeCreators.setCursorText('SOON'));
+    } else {
+      dispatch(nodeCreators.setCursorText('OPEN'));
+    }
+
     document.body.style.cursor = 'none';
     console.log(evt.object.name);
     const data = getNoteRef(evt.object.name);
@@ -141,6 +146,9 @@ export function Wallnotes(props) {
         ref={note1}
         geometry={nodes['Sticky-1'].geometry}
         material={materials['Material.001']}
+        onClick={() =>
+          window.open('https://brello.codingleo.com', '_blank').focus()
+        }
         // scale={100}
       >
         <Text
@@ -250,6 +258,11 @@ export function Wallnotes(props) {
         scale={springProps5.scale} // Use animated scale
         position={springProps5.position}
         rotation={springProps5.rotation}
+        onClick={() =>
+          window
+            .open('https://github.com/leodavinci1/cool-dash', '_blank')
+            .focus()
+        }
       >
         <Text
           font='./shadow.ttf'
