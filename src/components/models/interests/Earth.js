@@ -103,7 +103,7 @@ export function Earth(props) {
   return (
     <Inspector>
       <EarthBall />
-      <FlyingThing />
+      {/* <FlyingThing /> */}
     </Inspector>
   );
 }
