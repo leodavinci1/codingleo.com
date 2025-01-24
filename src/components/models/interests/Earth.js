@@ -24,7 +24,7 @@ import { Creators as nodeCreators } from '../../../store/ducks/node';
 export function Earth(props) {
   const { nodes, materials } = useGLTF('./models/Earth-transformed.glb');
   const earthRef = useRef();
-  const planeRef = useRef();
+  // const planeRef = useRef();
   const scroll = useScroll();
   const dispatch = useDispatch();
   const tl = useRef();
@@ -41,17 +41,17 @@ export function Earth(props) {
   useFrame(({ clock }) => {
     earthRef.current.rotation.y += 0.002;
     earthRef.current.rotation.x += 0.001;
-    planeRef.current.position.x = Math.sin(clock.getElapsedTime() * 1.3) * 18;
-    planeRef.current.position.z = Math.cos(clock.getElapsedTime() * 1.3) * 18;
-    planeRef.current.rotation.y += 0.0217;
+    // planeRef.current.position.x = Math.sin(clock.getElapsedTime() * 1.3) * 18;
+    // planeRef.current.position.z = Math.cos(clock.getElapsedTime() * 1.3) * 18;
+    // planeRef.current.rotation.y += 0.0217;
 
     tl.current.seek(scroll.offset * tl.current.duration());
   });
 
   useLayoutEffect(() => {
     earthRef.current.position.set(0, 1.5, 0);
-    planeRef.current.position.set(0, 0, 0);
-    planeRef.current.rotation.set(0, -8, -8);
+    // planeRef.current.position.set(0, 0, 0);
+    // planeRef.current.rotation.set(0, -8, -8);
 
     tl.current = gsap.timeline({
       defaults: { duration: 3, ease: 'power1.inOut' },
@@ -83,9 +83,9 @@ export function Earth(props) {
     );
   }
 
-  function FlyingThing() {
-    return <SmallAirplane refPlane={planeRef} />;
-  }
+  // function FlyingThing() {
+  //   return <SmallAirplane refPlane={planeRef} />;
+  // }
 
   function EarthBall() {
     return (
